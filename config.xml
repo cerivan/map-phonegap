@@ -52,13 +52,7 @@
 
 	
 
-    <platform name="android">
-		<plugin name="cordova-custom-config" version="*"/>
-		<custom-config-file target="AndroidManifest.xml" parent="/*">
-			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-		</custom-config-file>
-	</platform>
+    
 	
 	<platform name="android">
         <resource-file src="images/cerivan.png" target="app/src/main/res/mipmap/icon.png" />
