@@ -35,7 +35,7 @@
 		<!-- Required MDC Web JavaScript library -->
 		<script src="js/material-components-web.min.js"></script>
 		<script src="js/leaflet.js"></script>
-		<script src="js/script.js"></script>
+		
 		<script>
 
 			var marker_cemex = L.icon({
@@ -52,7 +52,7 @@
 					detectRetina: false
 				}).addTo(map);
 			var latlngs = [];
-			/* var onSuccess = function(position) {
+			var onSuccess = function(position) {
 				console.log('Latitude: '          + position.coords.latitude          + '\n' +
 					'Longitude: '         + position.coords.longitude         + '\n' +
 					'Altitude: '          + position.coords.altitude          + '\n' +
@@ -113,7 +113,7 @@
 				setTimeout(function(){ 
 					navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true }); 
 				}, i*10000); 
-			} */
+			} 
 			
 			
 			

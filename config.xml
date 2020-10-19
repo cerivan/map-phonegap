@@ -54,7 +54,7 @@
 	
 
     <plugin name="cordova-plugin-whitelist" spec="1" />
-	<plugin name="@mauron85/cordova-plugin-background-geolocation"/>
+	<plugin name="cordova-plugin-geolocation" />
 
 	
 
