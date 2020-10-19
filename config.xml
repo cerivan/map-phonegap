@@ -16,7 +16,7 @@
 
 	<preference name="orientation" value="portrait" />
 
-	<preference name="phonegap-version" value="cli-9.0.0" />
+	
 	
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#7d91ad" />
@@ -59,7 +59,7 @@
 	<plugin name="cordova-plugin-device" spec="~2.0.3" />
 	<plugin name="cordova-plugin-network-information" spec="~2.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-   
+   <plugin name="@mauron85/cordova-plugin-background-geolocation"/>
 	
 
 </widget>
