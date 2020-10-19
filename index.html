@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">	
+		<link rel="stylesheet" href="css/reset.min.css">
+		
+		<!-- Required styles for MDC Web -->
+		<link rel="stylesheet" href="css/material-components-web.min.css">
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+		<link rel="stylesheet" href="css/all.css">
+		<link rel="stylesheet" href="css/leaflet.css">
+		<link rel="stylesheet" href="css/style.css">		
+	</head>
+	
+	<body class="mdc-typography">
+		<header class="mdc-top-app-bar">
+			<div class="mdc-top-app-bar__row">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					<span class="mdc-top-app-bar__title"><img src="images/cemex.png" height="30px"></span>
+				</section>
+			</div>
+		</header>
+		
+		<div class="mdc-drawer-scrim"></div>	
+		<div class="mdc-drawer-app-content">
+			<main class="main-content" id="main-content">	
+				<div id="map"></div>			
+			</main>
+		</div>	
+		
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!-- Required MDC Web JavaScript library -->
+		<script src="js/material-components-web.min.js"></script>
+		<script src="js/leaflet.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+
+			var marker_cemex = L.icon({
+				iconUrl: '../resources/images/pin.png',
+			
+				iconSize:     [38, 51], // size of the icon
+				iconAnchor:   [19, 51], // point of the icon which will correspond to marker's location
+				popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+			});
+			var map = L.map('map').setView([46.2243735, 6.1008613], 16);
+			L.tileLayer('https://maps.sprb.fr/cache/{z}/{x}/{y}.png', {
+					minZoom: 10,
+					maxZoom: 18,
+					detectRetina: false
+				}).addTo(map);
+			var latlngs = [];
+			/* var onSuccess = function(position) {
+				console.log('Latitude: '          + position.coords.latitude          + '\n' +
+					'Longitude: '         + position.coords.longitude         + '\n' +
+					'Altitude: '          + position.coords.altitude          + '\n' +
+					'Accuracy: '          + position.coords.accuracy          + '\n' +
+					'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+					'Heading: '           + position.coords.heading           + '\n' +
+					'Speed: '             + position.coords.speed             + '\n' +
+					'Timestamp: '         + position.timestamp                + '\n'
+				);
+				
+				if ( Marker !== undefined ) {
+					map.removeLayer(Marker);
+				}
+				p = new L.LatLng(position.coords.latitude,position.coords.longitude);
+				latlngs.push(p);				
+				var polyline = L.polyline(latlngs, {color: 'blue',weight: 5,opacity: 0.5,smoothFactor: 1}).addTo(map);
+				map.setView([position.coords.latitude, position.coords.longitude], 16);
+				var Marker = "";
+				L.tileLayer('https://maps.sprb.fr/cache/{z}/{x}/{y}.png', {
+					minZoom: 10,
+					maxZoom: 18,
+					detectRetina: false
+				}).addTo(map);
+				
+				var Marker = L.marker([position.coords.latitude, position.coords.longitude], {
+					icon: marker_cemex
+				});
+				
+				map.addLayer(Marker);				  
+				  
+				$.ajax({
+					url: "http://cemex.logatik.fr/data.php", 
+					type: 'POST',
+					data : {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude,	
+						alt: position.coords.altitude,
+						acc: position.coords.accuracy,
+						head: position.coords.heading ,
+						speed: position.coords.speed ,
+						tstamp: position.timestamp,
+					},
+					success: function(doc) {
+						console.log(doc)				
+									
+					}
+				});	
+			}; 
+
+			// onError Callback receives a PositionError object
+			//
+				
+			function onError(error) {
+				alert('code: '    + error.code    + '\n' +
+					  'message: ' + error.message + '\n');
+			}
+			for(i= 0 ; i<=310 ; i++){
+				setTimeout(function(){ 
+					navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true }); 
+				}, i*10000); 
+			} */
+			
+			
+			
+			
+		</script>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+	margin:0;
+	padding:0;
+}
+#mapOLD {
+	width: 100vw;
+	height: 100vh;
+}
+#map {
+	width: 100vw;
+	height: 100vh;
+	top: 64px;
+}
+
+.leaflet-control-attribution {
+	display: none;
+}

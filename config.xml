@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.cerivan.map"
+    versionCode = "11"
+    version     = "1.0.1" >
+	
+	<name>Map</name>
+
+	<description>Geolocalisation	</description>
+
+	<author href="http://www.cerivan.com" email="mail@cerivan.com">	Cerivan	</author>
+	<content src="index.html" />
+        
+	<icon src="images/cerivan.png" width="80" height="80" density="mdpi" />
+
+	<preference name="orientation" value="portrait" />
+
+	<preference name="phonegap-version" value="cli-9.0.0" />
+	
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	<preference name="StatusBarBackgroundColor" value="#7d91ad" />
+
+	<access origin="*" />
+
+	<allow-navigation href="*" />
+	<feature name="http://api.phonegap.com/1.0/camera"/>	
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/storage"/>
+	
+	
+	<feature name="Storage">
+       		<param value="org.apache.cordova.Storage" name="android-package"/>
+	</feature>
+	<feature name="Camera">
+    		<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+	</feature>
+ 	<feature name="Device">
+        	<param name="android-package" value="org.apache.cordova.device.Device" />
+ 	</feature>
+	
+	<feature name="Camera">
+		 <param name="ios-package" value="CDVCamera" />
+    </feature>
+	<feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+	
+	
+	<preference name="load-url-timeout" value="30000" />
+
+	<platform name="android">
+        <resource-file src="images/cerivan.png" target="app/src/main/res/mipmap/icon.png" />
+        <allow-intent href="market:*" />
+    </platform>
+
+	<plugin name="cordova-plugin-battery-status" spec="~2.0.3" />
+	<plugin name="cordova-plugin-camera" spec="~4.1.0" />
+	<plugin name="cordova-plugin-console" spec="~1.1.0" />
+	<plugin name="cordova-plugin-contacts" spec="~3.0.1" />
+	<plugin name="cordova-plugin-device" spec="~2.0.3" />
+	<plugin name="cordova-plugin-network-information" spec="~2.0.2" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-background-geolocation" spec="@mauron85/cordova-plugin-background-geolocation@~3.1.0">
+        <variable name="GOOGLE_PLAY_SERVICES_VERSION" value="11+" />
+        <variable name="ANDROID_SUPPORT_LIBRARY_VERSION" value="26+" />
+        <variable name="ICON" value="@mipmap/ic_launcher" />
+        <variable name="SMALL_ICON" value="@mipmap/ic_launcher" />
+        <variable name="ACCOUNT_NAME" value="@string/app_name" />
+        <variable name="ACCOUNT_LABEL" value="@string/app_name" />
+        <variable name="ACCOUNT_TYPE" value="$PACKAGE_NAME.account" />
+        <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
+        <variable name="ALWAYS_USAGE_DESCRIPTION" value="App requires background tracking " />
+        <variable name="MOTION_USAGE_DESCRIPTION" value="App requires motion detection" />
+    </plugin>
+
+	
+
+</widget>
