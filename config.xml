@@ -54,10 +54,7 @@
 
     
 	
-	<platform name="android">
-        <resource-file src="images/cerivan.png" target="app/src/main/res/mipmap/icon.png" />
-        <allow-intent href="market:*" />
-    </platform>
+	
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-background-geolocation" spec="@mauron85/cordova-plugin-background-geolocation@~3.1.0">
         <variable name="GOOGLE_PLAY_SERVICES_VERSION" value="11+" />
