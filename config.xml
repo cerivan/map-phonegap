@@ -51,10 +51,7 @@
 	
 	<preference name="load-url-timeout" value="30000" />
 
-	<platform name="android">
-        <resource-file src="images/cerivan.png" target="app/src/main/res/mipmap/icon.png" />
-        <allow-intent href="market:*" />
-    </platform>
+	
 
 	<plugin name="cordova-plugin-battery-status" spec="~2.0.3" />
 	<plugin name="cordova-plugin-camera" spec="~4.1.0" />
@@ -64,17 +61,13 @@
 	<plugin name="cordova-plugin-network-information" spec="~2.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-background-geolocation" spec="@mauron85/cordova-plugin-background-geolocation@~3.1.0">
-        <variable name="GOOGLE_PLAY_SERVICES_VERSION" value="11+" />
-        <variable name="ANDROID_SUPPORT_LIBRARY_VERSION" value="26+" />
-        <variable name="ICON" value="@mipmap/ic_launcher" />
-        <variable name="SMALL_ICON" value="@mipmap/ic_launcher" />
-        <variable name="ACCOUNT_NAME" value="@string/app_name" />
-        <variable name="ACCOUNT_LABEL" value="@string/app_name" />
-        <variable name="ACCOUNT_TYPE" value="$PACKAGE_NAME.account" />
-        <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
-        <variable name="ALWAYS_USAGE_DESCRIPTION" value="App requires background tracking " />
-        <variable name="MOTION_USAGE_DESCRIPTION" value="App requires motion detection" />
-    </plugin>
+	  <variable name="GOOGLE_PLAY_SERVICES_VERSION" value="11+" />
+	  <variable name="ANDROID_SUPPORT_LIBRARY_VERSION" value="26+" />
+	  <variable name="ICON" value="@mipmap/icon" />
+	  <variable name="SMALL_ICON" value="@mipmap/icon" />
+	  <variable name="ALWAYS_USAGE_DESCRIPTION" value="App requires background tracking " />
+	  <variable name="MOTION_USAGE_DESCRIPTION" value="App requires motion detection" /> 
+	</plugin>
 
 	
 
